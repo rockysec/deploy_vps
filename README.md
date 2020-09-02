@@ -74,10 +74,14 @@ finally you need to create your dropplet creation plan with the command
 terraform plan -out=droplet.tfplan
 
 and then, execute this file to create the dropplet with the command 
-terraform apply "droplet.tfplan" 
+terraform apply "droplet.tfplan"
+
+and put your API KEY digital occean
 
 
 In a couple of minutes, your dropplet will be created with all the tools that you need.
 
 
-Note: the dropplet get all the tools from terraform provisioning, you need to create a bash script that download all the tools and store this script in your github repository, then with the provisioning you need to call this repository to download the bash script to auto install the tools. You need to edit the script and modify the dropplet.tf file line 25 with your script to download all the tools
+Note: the dropplet get all the tools from terraform provisioning, you need to create a bash script to download all the tools and store this script in your github repository, then with the provisioning you need to call this repository to download the bash script to auto install the tools. You need to edit the script and modify the dropplet.tf file line 25 with your script to download all the tools
+
+In the provider.tf you need to replace the ssh_fingerprint variable for you own value and you need an API key from digital occean.  
